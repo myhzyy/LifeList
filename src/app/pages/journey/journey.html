@@ -1,57 +1,66 @@
-<main class="journey-timeline dark">
+<main class="journey-dashboard dark">
   <!-- Header -->
   <header class="top-bar">
-    <h1>🌿 My Week’s Journey</h1>
+    <h1>⚡ My Journey</h1>
+    <p class="subtitle">Tracking progress & wins</p>
   </header>
 
-  <!-- XP Summary -->
-  <section class="xp-summary">
-    <div class="xp-bar">
-      <div class="xp-fill" style="width: 70%"></div>
+  <!-- Streak / XP Summary -->
+  <section class="streak-card">
+    <div class="streak-info">
+      <span class="streak-icon">🔥</span>
+      <div>
+        <h2>Current Streak</h2>
+        <p>5 Days in a row</p>
+      </div>
     </div>
-    <p class="xp-text">⚡ 350 XP · 50 XP until Level 2</p>
+    <div class="xp-summary">
+      <p>Level 1 · 350 XP</p>
+      <div class="xp-bar">
+        <div class="xp-fill" style="width: 70%"></div>
+      </div>
+      <small>50 XP until Level 2</small>
+    </div>
   </section>
 
-  <!-- Timeline -->
-  <section class="timeline">
-    <div class="event completed">
-      <div class="dot"></div>
-      <div class="content">
-        <h2>✅ Finished Angular Component</h2>
-        <p>+25 XP · Monday</p>
-      </div>
+  <!-- Weekly XP Graph -->
+  <section class="xp-graph">
+    <h2>📊 XP This Week</h2>
+    <div class="graph">
+      <div class="bar" style="height: 40%"><span>M</span></div>
+      <div class="bar" style="height: 60%"><span>T</span></div>
+      <div class="bar" style="height: 30%"><span>W</span></div>
+      <div class="bar" style="height: 80%"><span>T</span></div>
+      <div class="bar" style="height: 20%"><span>F</span></div>
+      <div class="bar" style="height: 50%"><span>S</span></div>
+      <div class="bar" style="height: 70%"><span>S</span></div>
     </div>
+  </section>
 
-    <div class="event completed">
-      <div class="dot"></div>
-      <div class="content">
-        <h2>📝 Wrote Daily Journal</h2>
-        <p>+25 XP · Tuesday</p>
-      </div>
-    </div>
+  <!-- Completed Tasks (Card style like Strava feed) -->
+  <section class="feed">
+    <article class="feed-item">
+      <header>
+        <h3>✅ Finished Angular Component</h3>
+        <time>Mon</time>
+      </header>
+      <p class="xp">+25 XP</p>
+    </article>
 
-    <div class="event completed">
-      <div class="dot"></div>
-      <div class="content">
-        <h2>🌱 Reviewed Notes Wireframe</h2>
-        <p>+15 XP · Wednesday</p>
-      </div>
-    </div>
+    <article class="feed-item">
+      <header>
+        <h3>📝 Wrote Daily Journal</h3>
+        <time>Tue</time>
+      </header>
+      <p class="xp">+25 XP</p>
+    </article>
 
-    <div class="event">
-      <div class="dot"></div>
-      <div class="content">
-        <h2>🏃 Go for a Run</h2>
-        <p>+10 XP · Pending</p>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="dot"></div>
-      <div class="content">
-        <h2>🎯 Build Today Page</h2>
-        <p>+25 XP · Upcoming</p>
-      </div>
-    </div>
+    <article class="feed-item">
+      <header>
+        <h3>🌱 Reviewed Notes Wireframe</h3>
+        <time>Wed</time>
+      </header>
+      <p class="xp">+15 XP</p>
+    </article>
   </section>
 </main>

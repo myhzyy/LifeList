@@ -1,0 +1,126 @@
+.profile-tab.dark {
+  font-family: system-ui, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Header */
+.top-bar {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #22c55e; // green accent
+  }
+}
+
+/* User Info */
+.user-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #22c55e;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+}
+
+/* XP Bar */
+.xp-summary {
+  margin: 1.5rem 0;
+  text-align: center;
+
+  .xp-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    .xp-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #22c55e, #3b82f6); // green → blue gradient
+      transition: width 0.3s ease;
+    }
+  }
+
+  .xp-text {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+
+  .stat-card {
+    flex: 1;
+    background: #111;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    border-left: 4px solid #22c55e;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #f97316; // orange for contrast
+    }
+
+    p {
+      margin: 0.25rem 0 0;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  }
+}
+
+/* Achievements */
+.achievements {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #22c55e;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background: #111;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #fff;
+      border-left: 4px solid #f97316;
+    }
+  }
+}

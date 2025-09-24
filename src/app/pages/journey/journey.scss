@@ -1,98 +1,162 @@
-.journey-timeline.dark {
-  padding: 1rem;
+.journey-dashboard.dark {
   font-family: system-ui, sans-serif;
-  background: #0d0d0d; // dark mode background
+  background: #0d0d0d;
   color: #fff;
   min-height: 100vh;
+  padding: 1rem;
 }
 
 /* Header */
 .top-bar {
   text-align: center;
-  padding: 1rem;
-  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
 
   h1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #22c55e; // green accent
-  }
-}
-
-/* XP bar */
-.xp-summary {
-  margin: 1.5rem 0;
-  text-align: center;
-
-  .xp-bar {
-    width: 100%;
-    height: 10px;
-    background: #222;
-    border-radius: 999px;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-
-    .xp-fill {
-      height: 100%;
-      width: 70%;
-      background: linear-gradient(90deg, #22c55e, #3b82f6); // green → blue gradient
-    }
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f97316; // Strava-style orange
   }
 
-  .xp-text {
+  .subtitle {
     font-size: 0.9rem;
     color: #aaa;
   }
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 1.5rem;
-  border-left: 2px dashed #333;
+/* Streak / XP Card */
+.streak-card {
+  background: #111;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 
-  .event {
-    position: relative;
-    margin-bottom: 2rem;
+  .streak-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 
-    .dot {
-      position: absolute;
-      left: -0.6rem;
-      top: 0.3rem;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #333;
-      border: 2px solid #0d0d0d;
+    .streak-icon {
+      font-size: 2rem;
     }
 
-    .content {
-      background: #111;
-      border-radius: 0.5rem;
-      padding: 0.75rem 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
 
-      h2 {
+    p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  }
+
+  .xp-summary {
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    .xp-bar {
+      width: 100%;
+      height: 10px;
+      background: #222;
+      border-radius: 999px;
+      margin-bottom: 0.25rem;
+      overflow: hidden;
+
+      .xp-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #22c55e, #3b82f6);
+        transition: width 0.3s ease;
+      }
+    }
+
+    small {
+      font-size: 0.75rem;
+      color: #aaa;
+    }
+  }
+}
+
+/* XP Graph */
+.xp-graph {
+  margin: 2rem 0;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #22c55e;
+    text-align: center;
+  }
+
+  .graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    padding: 0 0.5rem;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+
+    .bar {
+      flex: 1;
+      margin: 0 0.25rem;
+      background: linear-gradient(180deg, #f97316, #b45309); // orange tones
+      border-radius: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+
+      span {
+        font-size: 0.75rem;
+        color: #aaa;
+        margin-top: 0.25rem;
+        position: absolute;
+        bottom: -1.2rem;
+      }
+    }
+  }
+}
+
+/* Feed style list */
+.feed {
+  margin-top: 2rem;
+
+  .feed-item {
+    background: #111;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
         font-size: 1rem;
-        margin: 0 0 0.25rem;
         color: #fff;
       }
 
-      p {
-        font-size: 0.85rem;
+      time {
+        font-size: 0.8rem;
         color: #aaa;
-        margin: 0;
       }
     }
 
-    &.completed .dot {
-      background: #22c55e;
-      box-shadow: 0 0 6px #22c55e;
-    }
-
-    &.completed .content {
-      border-left: 4px solid #22c55e;
+    .xp {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+      color: #22c55e;
+      font-weight: 600;
     }
   }
 }
