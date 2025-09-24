@@ -12,3 +12,4 @@ you'v completed 15 tasks this week - congrats!
 TODO:
 
 change high priortiy
+change bottom maps
